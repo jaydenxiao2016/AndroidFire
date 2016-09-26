@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white_light">#dddddd</color>
+
+    <color name="white">#ffffff</color>
+
+    <color name="black">#000000</color> <!--黑-->
+
+    <color name="black_light">#363636</color> <!--黑-->
+
+    <color name="gray">#dcdcdc</color>
+
+</resources>

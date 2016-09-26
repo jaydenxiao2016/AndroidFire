@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.jaydenxiao.common.commonwidget.NormalTitleBar
+            android:id="@+id/ntb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.aspsine.irecyclerview.IRecyclerView
+            android:id="@+id/irc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ntb"
+            app:loadMoreEnabled="true"
+            app:refreshEnabled="true"
+            app:refreshHeaderLayout="@layout/layout_irecyclerview_refresh_header" />
+
+        <com.jaydenxiao.common.commonwidget.LoadingTip
+            android:id="@+id/loadedTip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ntb"
+            android:layout_gravity="center"
+            android:gravity="center" />
+    </RelativeLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/ic_arrow_upward"
+            app:backgroundTint="@color/main_color"
+            app:layout_behavior="com.jaydenxiao.androidfire.widget.ScrollAwareFABBehavior" />
+
+</android.support.design.widget.CoordinatorLayout>
+

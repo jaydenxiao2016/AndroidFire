@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+def releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23"
+
+    defaultConfig {
+        applicationId "jaydenxiao.com.androidfire"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 4
+        versionName "1.0.3"
+    }
+    buildTypes {
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //apk命名
+            android.applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        //这里修改apk文件名
+                        def fileName = "AndroidFire-${defaultConfig.versionCode}-${defaultConfig.versionName}-${releaseTime()}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+        debug{
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+        }
+    }
+    //设置虚拟机堆内存空间大小，避免在编译期间OOM
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+    }
+    //打包不检查
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile project(':library:photoPicker')//图片选择
+    compile project(':library:irecyclerview')//万能适配器和recyclerview
+    compile project(':library:oneKeyShareSDK')//分享
+    compile project(':library:jcvideoplayer')//视频播放
+    compile project(':library:selectordialog')//常用提示框
+
+
+}

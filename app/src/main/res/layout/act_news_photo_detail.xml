@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:clipToPadding="true">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/action_bar"
+        android:fitsSystemWindows="false"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:titleTextColor="@color/white"
+        app:title="@string/photo_news"/>
+
+    <com.jaydenxiao.common.commonwidget.ViewPagerFixed
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/black"/>
+
+    <TextView
+        android:id="@+id/photo_detail_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:padding="@dimen/item_margin"
+        android:textColor="@color/primary_text_white"
+        android:textSize="@dimen/font_normal"
+        tools:text="1/5  武汉奢华别墅区被洪水围困成孤岛"/>
+
+</RelativeLayout>
+

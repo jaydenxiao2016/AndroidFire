@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">AndroidFire</string>
+
+    <!--menu-->
+    <string name="news">AndroidFire新闻</string>
+    <string name="zhihu">知乎</string>
+    <string name="photo">图片</string>
+    <string name="video">视频</string>
+    <string name="tools">设置</string>
+    <string name="no_photo_mode">无图模式</string>
+    <string name="night_mode">夜间模式</string>
+    <string name="about">关于</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!-- 共享过度动画 -->
+    <string name="transition_photos">transition_animation_news_photos</string>
+
+    <!-- 新闻 -->
+    <string name="photo_collections">图集：%1$s</string>
+    <string name="news_from">%1$s %2$s</string>
+    <string name="photo_detail_title">%1$d/%2$d　%3$s</string>
+    <string name="web_view">WebView</string>
+    <string name="photo_news">图片新闻</string>
+    <string name="browser">用浏览器打开</string>
+    <string name="share">分享</string>
+    <string name="share_contents">来自「AndroidFire」的分享：%1$s %2$s</string>
+
+    <!-- 新闻频道 -->
+    <string name="channel_explain">点击可增删/长按并拖拽可排序</string>
+    <string name="my_channel">我的频道</string>
+    <string name="more_channel">更多频道</string>
+    <string name="channel_manage">频道管理</string>
+
+    <!-- 图片 -->
+    <string name="girl_title">靓妹纸</string>
+    <string name="girl">妹纸</string>
+    <string name="set_wallpaper">设为壁纸</string>
+    <!--视频-->
+    <string name="videos">视频</string>
+    <string name="video_play_times">%1$s次播放</string>
+
+    <!--动态 -->
+    <string name="circle_zone">AndroidFire动态</string>
+    <string name="zone_img_position">circle_img_position</string>
+    <string name="circle_zone_not_read_news">%1$s条新消息</string>
+    <string name="expand">全文</string>
+    <string name="shink">收起</string>
+    <string name="nick_name">世锋日上</string>
+    <string name="save">提交</string>
+    <string name="circle_publish_empty">发表内容不能为空！</string>
+    <string name="zone_publish_title">发表说说</string>
+    <string name="zone_toggle_theme_title">切换主题</string>
+    <string name="friend_zone_title">好友动态</string>
+    <string name="friend_zone_toggle">日夜模式切换</string>
+    <string name="friend_zone_about">关于</string>
+    <string name="care_main_title">我关注的</string>
+    <string name="care_about_wechat">更多精彩文章请关注微信公众号"Android经验分享"：这里将长期为您分享Android高手经验、中外开源项目、源码解析、框架设计和Android好文推荐！</string>
+
+
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:id="@+id/news_channel_tv"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:layout_margin="@dimen/item_margin"
+    android:background="@drawable/bg_item_news_channel"
+    android:gravity="center"
+    android:textColor="?attr/dayNightTwoTextColor"
+    android:textSize="@dimen/font_small"
+    tools:text="头条">
+</TextView>

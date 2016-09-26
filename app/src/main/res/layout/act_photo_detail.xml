@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/black">
+
+    <com.jaydenxiao.androidfire.widget.PullBackLayout
+        android:id="@+id/pull_back_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center">
+
+        <uk.co.senab.photoview.PhotoView
+            android:id="@+id/photo_touch_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:transitionName="@string/transition_photos" />
+        <!--使用PhotoView，共享动画不平滑-->
+    </com.jaydenxiao.androidfire.widget.PullBackLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:background="@drawable/bg_toolbar_shade"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:title="@string/photo"
+        tools:alpha="1.0" />
+</RelativeLayout>
+

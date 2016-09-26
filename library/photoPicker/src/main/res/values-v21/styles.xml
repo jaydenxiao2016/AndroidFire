@@ -1,0 +1,8 @@
+<resources>
+
+
+    <!-- Base application theme. -->
+    <style name="SelTheme" parent="@style/BaseAppTheme">
+
+    </style>
+</resources>

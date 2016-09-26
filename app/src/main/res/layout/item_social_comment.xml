@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/commentTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:lineSpacingMultiplier="1.1"
+        android:textColor="?attr/dayNightTwoTextColor"
+        android:textSize="14sp" />
+
+</LinearLayout>

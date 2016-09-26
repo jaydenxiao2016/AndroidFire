@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yuyh.library.imgsel.widget.SquareRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_gravity="center">
+
+    <ImageView
+        android:id="@+id/ivTakePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ivTakePhoto"
+        android:text="拍照"/>
+
+</com.yuyh.library.imgsel.widget.SquareRelativeLayout>

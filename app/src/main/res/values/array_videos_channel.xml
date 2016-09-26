@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--视频频道-->
+    <string-array name="video_channel_name">
+        <item>热点</item>
+        <item>搞笑</item>
+        <item>娱乐</item>
+        <item>精品</item>
+    </string-array>
+    <string-array name="video_channel_id">
+        <item>V9LG4B3A0</item>
+        <item>V9LG4E6VR</item>
+        <item>V9LG4CHOR</item>
+        <item>00850FRB</item>
+    </string-array>
+</resources>

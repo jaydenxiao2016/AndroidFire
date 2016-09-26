@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <ImageView
+        android:id="@+id/ivArrow"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="48dp"
+        android:layout_toLeftOf="@+id/tvRefresh"
+        android:background="@drawable/twitter_pull_arrow" />
+
+    <ImageView
+        android:id="@+id/ivSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="48dp"
+        android:layout_toLeftOf="@+id/tvRefresh"
+        android:background="@drawable/qq_refresh_success" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyleSmallInverse"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="48dp"
+        android:layout_toLeftOf="@+id/tvRefresh" />
+
+    <TextView
+        android:id="@+id/tvRefresh"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/dayNightTwoTextColor"
+        app:dayNightTwoTextColorAttr="dayNightTwoTextColor"
+        android:layout_centerInParent="true"
+        android:gravity="center" />
+
+</merge>

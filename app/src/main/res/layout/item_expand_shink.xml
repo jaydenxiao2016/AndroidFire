@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/expandable_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/dayNightTwoTextColor"
+        android:lineSpacingExtra="1dp"
+        android:text="发送到发送到发送到发单时发生地方水电费是的发送到发送到方式的发送到发送到发送到"
+        android:ellipsize="end"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/expand_collapse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:background="@android:color/transparent"
+        android:text="收起"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:gravity="center"
+        android:textColor="?attr/dayNightOneTextColor"
+        android:drawablePadding="3dp"
+        android:layout_marginTop="5dp" />
+</LinearLayout>

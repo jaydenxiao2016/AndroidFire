@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="?attr/dayNightBackground">
+    <com.jaydenxiao.common.commonwidget.NormalTitleBar
+        android:id="@+id/ntb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.aspsine.irecyclerview.IRecyclerView
+        android:id="@+id/irc"
+        android:layout_below="@+id/ntb"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:loadMoreEnabled="true"
+        app:refreshHeaderLayout="@layout/layout_irecyclerview_refresh_header"
+        app:refreshEnabled="true"
+        />
+
+    <com.jaydenxiao.common.commonwidget.LoadingTip
+        android:id="@+id/loadedTip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/editTextBodyLl"
+        android:visibility="visible"
+        android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:id="@+id/editTextBodyLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:background="#f6f6f6"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+        <EditText
+            android:id="@+id/circleEt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:background="@drawable/selector_gray_border"
+            android:layout_weight="1"
+            android:maxLines="4"
+            android:textSize="@dimen/font_normal"
+            android:hint="说点什么吧..."
+            />
+        <ImageView
+            android:id="@+id/sendIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:padding="12dp"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:src="@drawable/fasong" />
+    </LinearLayout>
+</RelativeLayout>
+
+    <include layout="@layout/item_floating_action_button" />
+
+</android.support.design.widget.CoordinatorLayout>

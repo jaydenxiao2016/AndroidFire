@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/container_background"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/act_news_detail">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/text_margin">
+        <TextView
+            android:id="@+id/news_detail_from_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="?attr/dayNightOneTextColor"
+            android:textSize="@dimen/font_normal"
+            android:text="androidFire介绍"/>
+        <TextView
+            android:id="@+id/tv_code_des"
+            android:layout_below="@+id/news_detail_from_tv"
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:textColor="?attr/dayNightTwoTextColor"
+            android:textSize="@dimen/font_normal"
+            android:text="@string/care_about_wechat"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/qrcode"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/tv_code_des"
+            android:layout_height="150dp" />
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

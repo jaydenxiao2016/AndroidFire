@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/dayNightBackground"
+    android:orientation="vertical">
+
+    <com.jaydenxiao.common.commonwidget.NormalTitleBar
+        android:id="@+id/ntb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ntb"
+        android:background="?attr/dayNightBackground"
+        android:gravity="left|top"
+        android:hint="你此刻的心情..."
+
+        android:maxLines="6"
+        android:minLines="5"
+        android:padding="15dp"
+        android:textColor="?attr/dayNightOneTextColor"
+        android:textSize="@dimen/font_normal2" />
+
+    <View
+        android:id="@+id/view_gad"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/et_content" />
+
+    <com.jaydenxiao.common.commonwidget.NoScrollGridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_gad"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:verticalSpacing="6dp" />
+
+    <TextView
+        android:id="@+id/tv_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/selector_orange_maincolor"
+        android:gravity="center"
+        android:padding="13dp"
+        android:text="提交"
+        android:textColor="?attr/dayNightOneTextColor"
+        android:textSize="@dimen/font_normal" />
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yuyh.library.imgsel.widget.SquareRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/ivPhotoCheaked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_uncheck" />
+    <FrameLayout
+        android:id="@+id/pi_picture_choose_item_select"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:background="@color/pc_black_t_pic">
+    </FrameLayout>
+
+</com.yuyh.library.imgsel.widget.SquareRelativeLayout>

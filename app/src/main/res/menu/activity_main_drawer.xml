@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_news"
+            android:icon="@drawable/ic_menu_news"
+            android:title="@string/news" />
+        <item
+            android:id="@+id/nav_photo"
+            android:icon="@drawable/ic_menu_photo"
+            android:title="@string/photo" />
+        <item
+            android:id="@+id/nav_video"
+            android:icon="@drawable/ic_menu_video"
+            android:title="@string/video" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_arrow_back"
+            android:title="@string/about" />
+    </group>
+
+    <item android:title="@string/tools">
+        <menu>
+            <item
+                android:id="@+id/nav_night_mode"
+                android:title="@string/night_mode"
+                app:actionLayout="@layout/drawer_switch"
+                app:showAsAction="always" />
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,9 @@
+<resources>
+
+
+    <!-- Base application theme. -->
+    <style name="SelTheme" parent="@style/BaseAppTheme">
+
+    </style>
+    <!-- <item name="android:windowTranslucentNavigation">true</item>-->
+</resources>

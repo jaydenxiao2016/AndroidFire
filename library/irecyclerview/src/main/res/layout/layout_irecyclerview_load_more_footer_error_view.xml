@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tvError"
+    android:textColor="?attr/dayNightTwoTextColor"
+    app:dayNightTwoTextColorAttr="dayNightTwoTextColor"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:text="NETWORK ERROR, TRY AGAIN" />

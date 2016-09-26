@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--<attr name="dayNightBackground" format="color|reference" />-->
+    <!--<attr name="dayNightOneTextColor" format="color|reference" />-->
+    <!--<attr name="dayNightTwoTextColor" format="color|reference" />-->
+    <!--<attr name="dayNightThreeTextColor" format="color|reference" />-->
+    <!--<attr name="dayNightBackgroundDrawable" format="color|reference" />-->
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/night_one_text_color</item>
+
+        <item name="dayNightBackground">@color/day_backgroup_color</item>
+        <item name="dayNightOneTextColor">@color/day_one_text_color</item>
+        <item name="dayNightTwoTextColor">@color/day_two_text_color</item>
+        <item name="dayNightThreeTextColor">@color/day_three_text_color</item>
+        <item name="dayNightBackgroundDrawable">@color/day_backgroup_color</item>
+    </style>
+    <!--冷启动界面-->
+    <style name="AppTheme.Launcher" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <!--白天主题，此处直接和AppTheme一样-->
+    <style name="DayTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/night_one_text_color</item>
+
+        <item name="dayNightBackground">@color/day_backgroup_color</item>
+        <item name="dayNightOneTextColor">@color/day_one_text_color</item>
+        <item name="dayNightTwoTextColor">@color/day_two_text_color</item>
+        <item name="dayNightThreeTextColor">@color/day_three_text_color</item>
+        <item name="dayNightBackgroundDrawable">@color/day_backgroup_color</item>
+    </style>
+    <!--夜间主题-->
+    <style name="NightTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/night_backgroup_color</item>
+        <item name="colorPrimaryDark">@color/night_backgroup_color</item>
+        <item name="colorAccent">@color/night_backgroup_color</item>
+
+        <item name="dayNightBackground">@color/night_backgroup_color</item>
+        <item name="dayNightOneTextColor">@color/night_one_text_color</item>
+        <item name="dayNightTwoTextColor">@color/night_two_text_color</item>
+        <item name="dayNightThreeTextColor">@color/night_there_text_color</item>
+        <item name="dayNightBackgroundDrawable">@color/night_there_text_color</item>
+
+    </style>
+
+    <!--窗口淡入淡出动画-->
+    <style name="Animation.Popup" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <!--普通dialog-->
+    <style name="CustomProgressDialog" parent="@style/CustomDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+</resources>

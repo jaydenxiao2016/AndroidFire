@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto">
+<com.github.clans.fab.FloatingActionMenu
+    android:id="@+id/menu_red"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:paddingRight="25dp"
+    android:paddingBottom="25dp"
+    fab:menu_colorNormal="@color/orange"
+    fab:menu_colorPressed="@color/main_color"
+    fab:menu_colorRipple="@color/main_color"
+    fab:menu_labels_ellipsize="end"
+    fab:menu_labels_singleLine="true"
+    fab:menu_backgroundColor="@color/transparent">
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sign"
+        fab:backgroundTint="#4BB7A7"
+        fab:fab_colorNormal="#4BB7A7"
+        fab:fab_size="mini"
+        fab:fab_label="签到" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/concern"
+        fab:fab_colorNormal="#818aa7"
+        fab:backgroundTint="#818aa7"
+        fab:fab_size="mini"
+        fab:fab_label="关注" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/luckybag"
+        fab:backgroundTint="@color/red"
+        fab:fab_colorNormal="@color/red"
+        fab:fab_size="mini"
+        fab:fab_label="红包" />
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/textmsg"
+        fab:backgroundTint="#ff9800"
+        fab:fab_colorNormal="#ff9800"
+        fab:fab_size="mini"
+        fab:fab_label="说说" />
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/imgemsg"
+        fab:backgroundTint="#4284E4"
+        fab:fab_colorNormal="#4284E4"
+        fab:fab_size="mini"
+        fab:fab_label="图文" />
+
+</com.github.clans.fab.FloatingActionMenu>
+</LinearLayout>

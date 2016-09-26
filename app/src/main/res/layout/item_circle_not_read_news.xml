@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_not_read_news_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    android:background="?attr/dayNightBackground"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_not_read_news_root"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/selector_gray_black"
+        android:gravity="center"
+        android:visibility="visible"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/img_newest_avater"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_centerVertical="true"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_not_read_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/img_newest_avater"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            tools:text="@string/circle_zone_not_read_news" />
+    </RelativeLayout>
+</LinearLayout>

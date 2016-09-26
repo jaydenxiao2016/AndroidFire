@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_white_corner4"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:paddingTop="20dp">
+
+    <TextView
+        android:id="@+id/edit_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black_light"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:layout_weight="1"
+        android:gravity="bottom|left"
+        android:id="@+id/edit_dialog_exittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:textSize="18sp"
+        />
+
+    <View
+        android:id="@+id/edit_dialog_line"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/black_light"
+        android:layout_marginBottom="15dp"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/edit_dialog_leftbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_widget_md_dialog"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:minWidth="55dp"
+            android:paddingBottom="6dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:paddingTop="6dp"
+            android:text="取消"
+            android:textColor="@color/black_light"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/edit_dialog_rightbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/selector_widget_md_dialog"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:maxWidth="90dp"
+            android:minWidth="55dp"
+            android:paddingBottom="6dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:paddingTop="6dp"
+            android:text="确定"
+            android:textColor="@color/black_light"
+            android:textSize="16sp"
+
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

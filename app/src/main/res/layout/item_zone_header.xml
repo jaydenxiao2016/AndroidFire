@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="220dp">
+        <ImageView
+            android:id="@+id/img_bg"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_marginBottom="3dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bgkobe"
+            android:visibility="visible" />
+        <ImageView
+            android:id="@+id/img_avater"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="3dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentBottom="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/toux2"
+            android:visibility="visible" />
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/font_normal2"
+            android:text="世锋日上"
+            android:textStyle="bold"
+            android:layout_toLeftOf="@+id/img_avater"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp"
+            android:paddingRight="8dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_alignTop="@+id/img_avater"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <include layout="@layout/item_circle_not_read_news"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_header"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        />
+</RelativeLayout>

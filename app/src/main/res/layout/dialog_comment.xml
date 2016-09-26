@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/dayNightBackground"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/copyTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_textcolor"
+        android:gravity="center_vertical"
+        android:paddingBottom="15dip"
+        android:paddingLeft="10dip"
+        android:paddingTop="15dip"
+        android:text="复制"
+        android:textSize="16sp"
+        android:textColor="?attr/dayNightOneTextColor" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="?attr/dayNightOneTextColor" />
+
+    <TextView
+        android:id="@+id/deleteTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_textcolor"
+        android:gravity="center_vertical"
+        android:paddingBottom="15dip"
+        android:paddingLeft="10dip"
+        android:paddingTop="15dip"
+        android:text="删除"
+        android:textSize="16sp" 
+        android:textColor="?attr/dayNightOneTextColor"/>
+
+</LinearLayout>

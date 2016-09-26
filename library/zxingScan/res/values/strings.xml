@@ -1,0 +1,5 @@
+<resources>
+
+    <string name="app_name">二维码生成和扫描</string>
+	<string name="scan_tips">\"将二维码图片对准扫描框即可自动扫描\"</string>
+</resources>

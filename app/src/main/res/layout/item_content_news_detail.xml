@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/container_background"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/act_news_detail">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/text_margin">
+        <TextView
+            android:id="@+id/news_detail_from_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="?attr/dayNightTwoTextColor"
+            android:textSize="@dimen/font_small"
+            tools:text="澎湃新闻 06-06 17:24"/>
+        <!--        android:layout_below="@id/news_detail_title_tv"
+                android:layout_marginTop="10dp"-->
+
+        <TextView
+            android:id="@+id/news_detail_body_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/news_detail_from_tv"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="6dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="?attr/dayNightOneTextColor"
+            android:textSize="@dimen/font_normal"
+            tools:text="最近，“民国无名女神”在微博上火了。讲真，这位无名女神是比现在那些整容脸、
+            网红脸让人看的赏心悦目。但是，比起那些年轰动的民国美女和才女们，她还是略有逊色。
+            要知道这些美女和才女们，不论是本尊还是是后世扮演她们的演员，真真是极美的。这些人里有你心中女神么？"/>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp"/>
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

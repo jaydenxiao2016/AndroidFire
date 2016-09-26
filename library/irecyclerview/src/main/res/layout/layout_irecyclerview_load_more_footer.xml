@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aspsine.irecyclerview.widget.LoadMoreFooterView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/dayNightBackground"
+    app:dayNightBackgroundAttr="dayNightBackground"
+    android:layout_height="48dp" />
