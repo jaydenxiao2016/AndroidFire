@@ -6,8 +6,6 @@ AndroidFire，一款新闻阅读 App，基于 Material Design + MVP + RxJava + R
 
 ####国际案例，有图有真相：
 
-![androidfire3.gif](http://upload-images.jianshu.io/upload_images/1964096-96512981337c00f7.gif?imageMogr2/auto-orient/strip)
-
 ![Screenshot_2016-09-26-16-02-13-576_jaydenxiao.com.png](http://upload-images.jianshu.io/upload_images/1964096-a1b3dde20b3fb267.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![Screenshot_2016-09-26-16-02-20-243_jaydenxiao.com.png](http://upload-images.jianshu.io/upload_images/1964096-260fd29d4c17c548.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
