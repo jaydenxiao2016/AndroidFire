@@ -1,7 +1,5 @@
 AndroidFire，一款新闻阅读 App，基于 Material Design + MVP + RxJava + Retrofit + Glide，基本涵盖了当前 Android 端开发最常用的主流框架，基于此框架可以快速开发一个app。
 
-[github源码](https://github.com/jaydenxiao2016/AndroidFire)
-
 [安装地址](http://fir.im/androidFire)
 
 ####国际案例，有图有真相：
@@ -44,8 +42,6 @@ AndroidFire，一款新闻阅读 App，基于 Material Design + MVP + RxJava + R
 >本人会坚持在这个项目上实践最新的技术，也会争取拓展更多的阅读内容，欢迎各位关注！
 注意：本项目还在测试阶段，发现 bug 或有好的建议欢迎issue、email(jaydenxiao2016@gmail.com),如果感觉对你有帮助也欢迎点个 star、fork，本项目仅做学习交流使用，API 数据内容所有权归原作公司所有，请勿用于其他用途
 
-最后附上下载地址和源码
-[github源码](https://github.com/jaydenxiao2016/AndroidFire)
 [安装地址](http://fir.im/androidFire)
 
 更多精彩文章请关注微信公众号"**Android经验分享**"：这里将长期为您分享Android高手经验、中外开源项目、源码解析、框架设计和Android好文推荐！
