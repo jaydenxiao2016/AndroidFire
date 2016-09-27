@@ -4,9 +4,9 @@ AndroidFire，一款新闻阅读 App框架，基于 Material Design + MVP + RxJa
 ####国际案例，有图有真相：
 
 ![首页效果图](https://mmbiz.qlogo.cn/mmbiz_jpg/2EhjCcceOmiacVsI4wE6cDpOYHc0grkibzibpoxAG8EwBLVn4dHib3D0Wwrez4WeNmFkib19vKibYnMu9nQucqP5gvvw/0?wx_fmt=jpeg)
-![美女和视频效果图](http://upload-images.jianshu.io/upload_images/1964096-5c0afdf95528c5d6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-![关注和朋友圈效果图](http://upload-images.jianshu.io/upload_images/1964096-d02db1515fe37e8f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-![朋友圈选择图片发布](http://upload-images.jianshu.io/upload_images/1964096-9343383c9ac66ab8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![美女和视频效果图](https://mmbiz.qlogo.cn/mmbiz_jpg/2EhjCcceOmiacVsI4wE6cDpOYHc0grkibzqao1ia26RiaZkP91tKePGT4OkuWU87wtYdmxpTauialIhhkVNic5DTUbiag/0?wx_fmt=jpeg)
+![关注和朋友圈效果图](https://mmbiz.qlogo.cn/mmbiz_jpg/2EhjCcceOmiacVsI4wE6cDpOYHc0grkibzxbZBpcwzfT4icn613ltpvcpVQ1um2RrdOKOzA2XO8ETTE5DKTntKSBQ/0?wx_fmt=jpeg)
+![朋友圈选择图片发布](https://mmbiz.qlogo.cn/mmbiz_jpg/2EhjCcceOmiacVsI4wE6cDpOYHc0grkibzAILAo5nkQhnsHkL3GyjbgEib8CFykAjXKn9SKwsD7PSzfQDBhOIsVFA/0?wx_fmt=jpeg)
 
 ####目前模块包括：
 - 新闻：头条、科技、财经、NBA等类型，可自主选择订阅
