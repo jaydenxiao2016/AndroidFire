@@ -96,11 +96,11 @@ public class MainActivity extends BaseActivity {
         tabLayout.measure(0,0);
         tabLayoutHeight=tabLayout.getMeasuredHeight();
         //监听菜单显示或隐藏
-        mRxManager.on(AppConstant.MENU_SHOW_HIDE, new Action1<Object>() {
+        mRxManager.on(AppConstant.MENU_SHOW_HIDE, new Action1<Boolean>() {
 
             @Override
-            public void call(Object o) {
-                startAnimation((Boolean) o);
+            public void call(Boolean hideOrShow) {
+                startAnimation(hideOrShow);
             }
         });
     }

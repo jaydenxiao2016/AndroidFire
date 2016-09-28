@@ -63,12 +63,6 @@ public class PhotosMainFragment extends BaseFragment<PhotosListPresenter,PhotosL
             @Override
             public void convert(ViewHolderHelper helper,final PhotoGirl photoGirl) {
                 ImageView imageView=helper.getView(R.id.iv_photo);
-//                // 使用picasso加载图片可以自动计算图片实际宽高比进行设置，刷新也不会出现闪屏现象！
-//                Picasso.with(AppApplication.getAppContext()).load(photoGirl.getUrl())
-//                        .placeholder(R.drawable.ic_image_loading)
-//                        .error(R.drawable.ic_empty_picture)
-//                        .into(imageView);
-                //ImageLoaderUtils.display(mContext,imageView,photoGirl.getUrl());
                 Glide.with(mContext).load(photoGirl.getUrl())
                         .diskCacheStrategy(DiskCacheStrategy.SOURCE)
                         .placeholder(com.jaydenxiao.common.R.drawable.ic_image_loading)
