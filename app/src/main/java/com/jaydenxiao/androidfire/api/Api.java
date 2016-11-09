@@ -2,6 +2,7 @@ package com.jaydenxiao.androidfire.api;
 
 
 import android.support.annotation.NonNull;
+import android.text.TextUtils;
 import android.util.SparseArray;
 
 import com.google.gson.Gson;
@@ -143,15 +144,16 @@ public class Api {
         @Override
         public Response intercept(Chain chain) throws IOException {
             Request request = chain.request();
+            String cacheControl = request.cacheControl().toString();
             if (!NetWorkUtils.isNetConnected(BaseApplication.getAppContext())) {
                 request = request.newBuilder()
-                        .cacheControl(CacheControl.FORCE_CACHE)
+                        .cacheControl(TextUtils.isEmpty(cacheControl)?CacheControl.FORCE_NETWORK:CacheControl.FORCE_CACHE)
                         .build();
             }
             Response originalResponse = chain.proceed(request);
             if (NetWorkUtils.isNetConnected(BaseApplication.getAppContext())) {
                 //有网的时候读接口上的@Headers里的配置，你可以在这里进行统一的设置
-                String cacheControl = request.cacheControl().toString();
+
                 return originalResponse.newBuilder()
                         .header("Cache-Control", cacheControl)
                         .removeHeader("Pragma")

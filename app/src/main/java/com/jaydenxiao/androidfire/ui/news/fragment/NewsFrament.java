@@ -61,6 +61,7 @@ public class NewsFrament extends BaseFragment<NewsListPresenter, NewsListModel> 
             mNewsType = getArguments().getString(AppConstant.NEWS_TYPE);
         }
         irc.setLayoutManager(new LinearLayoutManager(getContext()));
+        datas.clear();
         newListAdapter = new NewListAdapter(getContext(), datas);
         newListAdapter.openLoadAnimation(new ScaleInAnimation());
         irc.setAdapter(newListAdapter);
