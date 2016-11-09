@@ -81,7 +81,12 @@ public class NewsMainFragment extends BaseFragment<NewsMainPresenter,NewsMainMod
                 channelNames.add(newsChannelsMine.get(i).getNewsChannelName());
                 mNewsFragmentList.add(createListFragments(newsChannelsMine.get(i)));
             }
-            fragmentAdapter = new BaseFragmentAdapter(getChildFragmentManager(), mNewsFragmentList, channelNames);
+            if(fragmentAdapter==null) {
+                fragmentAdapter = new BaseFragmentAdapter(getChildFragmentManager(), mNewsFragmentList, channelNames);
+            }else{
+                //刷新fragment
+                fragmentAdapter.setFragments(getChildFragmentManager(),mNewsFragmentList,channelNames);
+            }
             viewPager.setAdapter(fragmentAdapter);
             tabs.setupWithViewPager(viewPager);
             MyUtils.dynamicSetTabLayoutMode(tabs);

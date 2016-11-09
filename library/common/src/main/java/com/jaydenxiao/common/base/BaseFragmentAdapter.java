@@ -3,6 +3,7 @@ package com.jaydenxiao.common.base;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 
 import com.jaydenxiao.common.commonutils.CollectionUtils;
 
@@ -21,8 +22,23 @@ public class BaseFragmentAdapter extends FragmentPagerAdapter {
 
     public BaseFragmentAdapter(FragmentManager fm, List<Fragment> fragmentList, List<String> mTitles) {
         super(fm);
-        this.fragmentList = fragmentList;
         this.mTitles = mTitles;
+        setFragments(fm,fragmentList,mTitles);
+    }
+    //刷新fragment
+    public void setFragments(FragmentManager fm,List<Fragment> fragments,List<String> mTitles) {
+        this.mTitles = mTitles;
+        if (this.fragmentList != null) {
+            FragmentTransaction ft = fm.beginTransaction();
+            for (Fragment f : this.fragmentList) {
+                ft.remove(f);
+            }
+            ft.commitAllowingStateLoss();
+            ft = null;
+            fm.executePendingTransactions();
+        }
+        this.fragmentList = fragments;
+        notifyDataSetChanged();
     }
 
     @Override
