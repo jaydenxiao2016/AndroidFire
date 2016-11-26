@@ -37,7 +37,7 @@ public class Api {
     public static final int CONNECT_TIME_OUT = 7676;
     public Retrofit retrofit;
     public ApiService movieService;
-
+    public OkHttpClient okHttpClient;
     private static SparseArray<Api> sRetrofitManager = new SparseArray<>(HostType.TYPE_COUNT);
 
     /*************************缓存设置*********************/
@@ -93,7 +93,7 @@ public class Api {
             }
         };
 
-        OkHttpClient okHttpClient = new OkHttpClient.Builder()
+        okHttpClient = new OkHttpClient.Builder()
                 .readTimeout(READ_TIME_OUT, TimeUnit.MILLISECONDS)
                 .connectTimeout(CONNECT_TIME_OUT, TimeUnit.MILLISECONDS)
                 .addInterceptor(mRewriteCacheControlInterceptor)
@@ -125,6 +125,19 @@ public class Api {
             sRetrofitManager.put(hostType, retrofitManager);
         }
         return retrofitManager.movieService;
+    }
+
+    /**
+     * OkHttpClient
+     * @return
+     */
+    public static OkHttpClient getOkHttpClient(){
+        Api retrofitManager = sRetrofitManager.get(HostType.NETEASE_NEWS_VIDEO);
+        if (retrofitManager == null) {
+            retrofitManager = new Api(HostType.NETEASE_NEWS_VIDEO);
+            sRetrofitManager.put(HostType.NETEASE_NEWS_VIDEO, retrofitManager);
+        }
+        return retrofitManager.okHttpClient;
     }
 
 

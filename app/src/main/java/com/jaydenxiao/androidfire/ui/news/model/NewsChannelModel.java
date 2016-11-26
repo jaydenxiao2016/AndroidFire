@@ -62,7 +62,7 @@ public class NewsChannelModel implements NewsChannelContract.Model {
     }
 
     @Override
-    public Observable<String> swapDb(final ArrayList<NewsChannelTable> newsChannelTableList,int fromPosition, int toPosition) {
+    public Observable<String> swapDb(final ArrayList<NewsChannelTable> newsChannelTableList, int fromPosition, int toPosition) {
        return Observable.create(new Observable.OnSubscribe<String>() {
             @Override
             public void call(Subscriber<? super String> subscriber) {
@@ -75,7 +75,7 @@ public class NewsChannelModel implements NewsChannelContract.Model {
     }
 
     @Override
-    public Observable<String> updateDb(final ArrayList<NewsChannelTable> mineChannelTableList,final ArrayList<NewsChannelTable> moreChannelTableList) {
+    public Observable<String> updateDb(final ArrayList<NewsChannelTable> mineChannelTableList, final ArrayList<NewsChannelTable> moreChannelTableList) {
         return Observable.create(new Observable.OnSubscribe<String>() {
             @Override
             public void call(Subscriber<? super String> subscriber) {

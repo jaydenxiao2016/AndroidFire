@@ -31,14 +31,15 @@ public class ViewHolderUtil {
 	 * if (convertView == null) { convertView = LayoutInflater.from(context)
 	 * .inflate(R.layout.banana_phone, parent, false); }
 	 * 
-	 * ImageView bananaView = ViewHolder.get(convertView, R.id.banana); TextView
-	 * phoneView = ViewHolder.get(convertView, R.id.phone);
+	 * ImageView bananaView = ViewHolder.get(convertView, R.id.banana);
+	 * TextView phoneView = ViewHolder.get(convertView, R.id.phone);
 	 * 
 	 * BananaPhone bananaPhone = getItem(position);
 	 * phoneView.setText(bananaPhone.getPhone());
 	 * bananaView.setImageResource(bananaPhone.getBanana());
 	 * 
-	 * return convertView; }
+	 * return convertView;
+	 * }
 	 */
 	
 

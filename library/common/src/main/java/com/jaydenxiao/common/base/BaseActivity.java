@@ -4,6 +4,7 @@ package com.jaydenxiao.common.base;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -62,10 +63,12 @@ public abstract class BaseActivity<T extends BasePresenter, E extends BaseModel>
     public E mModel;
     public Context mContext;
     public RxManager mRxManager;
+    private boolean isConfigChange=false;
 
         @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        isConfigChange=false;
         mRxManager=new RxManager();
         doBeforeSetcontentView();
         setContentView(getLayoutId());
@@ -258,14 +261,24 @@ public abstract class BaseActivity<T extends BasePresenter, E extends BaseModel>
         }
     }
 
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        isConfigChange=true;
+    }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         if (mPresenter != null)
             mPresenter.onDestroy();
-        mRxManager.clear();
+        if(mRxManager!=null) {
+            mRxManager.clear();
+        }
+        if(isConfigChange){
+            AppManager.getAppManager().finishActivity(this);
+        }
         ButterKnife.unbind(this);
-        AppManager.getAppManager().finishActivity(this);
+
     }
 }
