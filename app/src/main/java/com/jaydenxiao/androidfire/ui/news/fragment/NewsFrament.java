@@ -121,7 +121,9 @@ public class NewsFrament extends BaseFragment<NewsListPresenter, NewsListModel> 
     @Override
     public void showLoading(String title) {
         if( newListAdapter.getPageBean().isRefresh()) {
-            loadedTip.setLoadingTip(LoadingTip.LoadStatus.loading);
+            if(newListAdapter.getSize()<=0) {
+                loadedTip.setLoadingTip(LoadingTip.LoadStatus.loading);
+            }
         }
     }
 
@@ -133,8 +135,10 @@ public class NewsFrament extends BaseFragment<NewsListPresenter, NewsListModel> 
     @Override
     public void showErrorTip(String msg) {
         if( newListAdapter.getPageBean().isRefresh()) {
-            loadedTip.setLoadingTip(LoadingTip.LoadStatus.error);
-            loadedTip.setTips(msg);
+            if(newListAdapter.getSize()<=0) {
+                loadedTip.setLoadingTip(LoadingTip.LoadStatus.error);
+                loadedTip.setTips(msg);
+            }
             irc.setRefreshing(false);
         }else{
             irc.setLoadMoreStatus(LoadMoreFooterView.Status.ERROR);

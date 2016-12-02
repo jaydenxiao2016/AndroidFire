@@ -157,7 +157,9 @@ public class VideosFragment extends BaseFragment<VideoListPresenter, VideosListM
     @Override
     public void showLoading(String title) {
         if( videoListAdapter.getPageBean().isRefresh()) {
-            loadedTip.setLoadingTip(LoadingTip.LoadStatus.loading);
+            if(videoListAdapter.getSize()<=0) {
+                loadedTip.setLoadingTip(LoadingTip.LoadStatus.loading);
+            }
         }
     }
 
@@ -169,9 +171,11 @@ public class VideosFragment extends BaseFragment<VideoListPresenter, VideosListM
     @Override
     public void showErrorTip(String msg) {
         if( videoListAdapter.getPageBean().isRefresh()) {
-            loadedTip.setLoadingTip(LoadingTip.LoadStatus.error);
-            loadedTip.setTips(msg);
-            irc.setRefreshing(false);
+            if(videoListAdapter.getSize()<=0) {
+                loadedTip.setLoadingTip(LoadingTip.LoadStatus.error);
+                loadedTip.setTips(msg);
+                irc.setRefreshing(false);
+            }
         }else{
             irc.setLoadMoreStatus(LoadMoreFooterView.Status.ERROR);
         }
