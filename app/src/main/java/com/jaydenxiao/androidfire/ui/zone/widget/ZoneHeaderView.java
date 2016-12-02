@@ -14,6 +14,7 @@ import com.jaydenxiao.androidfire.R;
 import com.jaydenxiao.androidfire.ui.zone.DatasUtil;
 import com.jaydenxiao.common.commonutils.FormatUtil;
 import com.jaydenxiao.common.commonutils.ImageLoaderUtils;
+import com.jaydenxiao.common.commonwidget.WaveView;
 
 /**
  * des:圈子消息头
@@ -25,6 +26,7 @@ public class ZoneHeaderView extends LinearLayout{
     private TextView tv_name,tv_not_read_new;
     private LinearLayout ll_not_read_news_root;
     private RelativeLayout rl_not_read_news_root;
+    private WaveView waveView;
     public ZoneHeaderView(Context context) {
         super(context);
         initView();
@@ -48,16 +50,25 @@ public class ZoneHeaderView extends LinearLayout{
 
     private void initView() {
         View view = inflate(getContext(), R.layout.item_zone_header, null);
-        img_avater= (ImageView) view.findViewById(R.id.img_avater);
-        img_newest_avater= (ImageView) view.findViewById(R.id.img_newest_avater);
-        tv_name= (TextView) view.findViewById(R.id.tv_name);
-        tv_not_read_new=(TextView) view.findViewById(R.id.tv_not_read_new);
-        ll_not_read_news_root= (LinearLayout) view.findViewById(R.id.ll_not_read_news_root);
-        rl_not_read_news_root= (RelativeLayout) view.findViewById(R.id.rl_not_read_news_root);
+        img_avater = (ImageView) view.findViewById(R.id.img_avater);
+        waveView= (WaveView) view.findViewById(R.id.wave_view);
+        img_newest_avater = (ImageView) view.findViewById(R.id.img_newest_avater);
+        tv_name = (TextView) view.findViewById(R.id.tv_name);
+        tv_not_read_new = (TextView) view.findViewById(R.id.tv_not_read_new);
+        ll_not_read_news_root = (LinearLayout) view.findViewById(R.id.ll_not_read_news_root);
+        rl_not_read_news_root = (RelativeLayout) view.findViewById(R.id.rl_not_read_news_root);
         rl_not_read_news_root.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 ll_not_read_news_root.setVisibility(View.GONE);
+            }
+        });
+        final RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) img_avater.getLayoutParams();
+        waveView.setOnWaveAnimationListener(new WaveView.OnWaveAnimationListener() {
+            @Override
+            public void OnWaveAnimation(float y) {
+                lp.setMargins(0, 0, 0, (int) y + 2);
+                img_avater.setLayoutParams(lp);
             }
         });
         addView(view);

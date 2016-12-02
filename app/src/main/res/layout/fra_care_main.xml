@@ -28,8 +28,8 @@
 
         <ImageView
             android:id="@+id/img_logo"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_gravity="center" />
     </FrameLayout>
 
