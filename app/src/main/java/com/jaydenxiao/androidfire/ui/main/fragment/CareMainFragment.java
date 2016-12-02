@@ -1,13 +1,17 @@
 package com.jaydenxiao.androidfire.ui.main.fragment;
 
+import android.view.Gravity;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.jaydenxiao.androidfire.R;
 import com.jaydenxiao.androidfire.ui.news.activity.AboutActivity;
+import com.jaydenxiao.androidfire.ui.zone.DatasUtil;
 import com.jaydenxiao.androidfire.ui.zone.activity.CircleZoneActivity;
 import com.jaydenxiao.common.base.BaseFragment;
-import com.jaydenxiao.common.commonwidget.NormalTitleBar;
+import com.jaydenxiao.common.commonutils.ImageLoaderUtils;
+import com.jaydenxiao.common.commonwidget.WaveView;
 import com.jaydenxiao.common.daynightmodeutils.ChangeModeController;
 
 import butterknife.Bind;
@@ -21,10 +25,10 @@ import butterknife.OnClick;
 public class CareMainFragment extends BaseFragment {
     @Bind(R.id.ll_friend_zone)
     LinearLayout llFriendZone;
-    @Bind(R.id.iv_add)
-    ImageView ivAdd;
-    @Bind(R.id.ntb)
-    NormalTitleBar ntb;
+    @Bind(R.id.wave_view)
+    WaveView waveView;
+    @Bind(R.id.img_logo)
+    ImageView imgLogo;
 
     @Override
     protected int getLayoutResource() {
@@ -38,8 +42,17 @@ public class CareMainFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-        ntb.setTvLeftVisiable(false);
-        ntb.setTitleText(getContext().getString(R.string.care_main_title));
+        //设置头像跟着波浪背景浮动
+        ImageLoaderUtils.displayRound(getContext(),imgLogo, DatasUtil.getRandomPhotoUrl());
+        final FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(-2,-2);
+        lp.gravity = Gravity.CENTER;
+        waveView.setOnWaveAnimationListener(new WaveView.OnWaveAnimationListener() {
+            @Override
+            public void OnWaveAnimation(float y) {
+                lp.setMargins(0,0,0,(int)y+2);
+                imgLogo.setLayoutParams(lp);
+            }
+        });
     }
     @OnClick(R.id.ll_friend_zone)
     public void friendZone(){

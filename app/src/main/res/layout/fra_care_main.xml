@@ -1,97 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_width="match_parent"
     app:cardBackgroundColor="?attr/dayNightBackground"
-    app:dayNightBackgroundAttr="dayNightBackground"
-    android:layout_height="match_parent">
-    <com.jaydenxiao.common.commonwidget.NormalTitleBar
-        android:id="@+id/ntb"
+    app:dayNightBackgroundAttr="dayNightBackground">
+
+<!--    波浪背景和头像-->
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-<LinearLayout
-    android:id="@+id/ll_friend_zone"
-    android:layout_width="match_parent"
-    android:background="@drawable/selector_gray_deepgray"
-    android:layout_marginTop="20dp"
-    android:padding="8dp"
-    android:layout_height="wrap_content">
-    <ImageView
-        android:layout_width="30dp"
-        android:src="@drawable/zone"
-        android:layout_marginLeft="15dp"
-        android:layout_height="30dp" />
-    <TextView
+        android:layout_height="200dp"
+        android:background="@color/main_color">
+        <TextView
+            android:layout_width="match_parent"
+            android:text="我关注的"
+            android:textColor="@color/white"
+            android:layout_gravity="center|top"
+            android:gravity="center"
+            android:layout_height="45dp" />
+
+        <com.jaydenxiao.common.commonwidget.WaveView
+            android:id="@+id/wave_view"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_gravity="bottom" />
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_friend_zone"
         android:layout_width="match_parent"
-        android:text="@string/friend_zone_title"
-        android:paddingLeft="15dp"
-        android:textColor="?attr/dayNightTwoTextColor"
-        app:dayNightTwoTextColorAttr="dayNightTwoTextColor"
-        android:layout_gravity="center_vertical"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_gray_deepgray"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/zone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="@string/friend_zone_title"
+            android:textColor="?attr/dayNightTwoTextColor"
+            app:dayNightTwoTextColorAttr="dayNightTwoTextColor" />
+    </LinearLayout>
+
     <LinearLayout
         android:id="@+id/ll_daynight_toggle"
         android:layout_width="match_parent"
-        android:background="@drawable/selector_gray_deepgray"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
+        android:background="@drawable/selector_gray_deepgray"
+        android:padding="6dp">
+
         <ImageView
             android:layout_width="38dp"
-            android:src="@drawable/togglebutton"
+            android:layout_height="38dp"
             android:layout_marginLeft="15dp"
-            android:layout_height="38dp" />
+            android:src="@drawable/togglebutton" />
+
         <TextView
             android:layout_width="match_parent"
-            android:text="@string/friend_zone_toggle"
-            android:paddingLeft="8dp"
-            android:textColor="?attr/dayNightTwoTextColor"
-            app:dayNightTwoTextColorAttr="dayNightTwoTextColor"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_height="wrap_content" />
+            android:paddingLeft="8dp"
+            android:text="@string/friend_zone_toggle"
+            android:textColor="?attr/dayNightTwoTextColor"
+            app:dayNightTwoTextColorAttr="dayNightTwoTextColor" />
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/ll_daynight_about"
         android:layout_width="match_parent"
-        android:background="@drawable/selector_gray_deepgray"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:padding="6dp"
-        android:layout_height="wrap_content">
+        android:background="@drawable/selector_gray_deepgray"
+        android:padding="6dp">
+
         <ImageView
             android:layout_width="38dp"
-            android:src="@drawable/about"
+            android:layout_height="38dp"
             android:layout_marginLeft="15dp"
-            android:layout_height="38dp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:text="@string/friend_zone_about"
-            android:paddingLeft="8dp"
-            android:textColor="?attr/dayNightTwoTextColor"
-            app:dayNightTwoTextColorAttr="dayNightTwoTextColor"
-            android:layout_gravity="center_vertical"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <ImageView
-            android:id="@+id/iv_add"
-            android:layout_width="60dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/zone_friend_add"
-            android:layout_height="60dp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:text="添加更多感兴趣的内容"
-            android:layout_below="@+id/iv_add"
-            android:gravity="center"
-            android:padding="10dp"
-            android:textColor="?attr/dayNightTwoTextColor"
-            app:dayNightTwoTextColorAttr="dayNightTwoTextColor"
-            android:layout_height="wrap_content" />
-    </RelativeLayout>
+            android:src="@drawable/about" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:text="@string/friend_zone_about"
+            android:textColor="?attr/dayNightTwoTextColor"
+            app:dayNightTwoTextColorAttr="dayNightTwoTextColor" />
+    </LinearLayout>
 
 </LinearLayout>

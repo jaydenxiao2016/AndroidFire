@@ -4,13 +4,13 @@ def releaseTime() {
 }
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23"
+    compileSdkVersion 24
+    buildToolsVersion "24"
 
     defaultConfig {
         applicationId "jaydenxiao.com.androidfire"
         minSdkVersion 15
-        targetSdkVersion 23
+        targetSdkVersion 24
         versionCode 4
         versionName "1.0.3"
     }

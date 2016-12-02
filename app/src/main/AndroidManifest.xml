@@ -35,7 +35,6 @@
         <activity android:name=".ui.zone.activity.CircleZoneActivity"/>
         <activity android:name=".ui.zone.activity.CirclePublishActivity"/>
         <activity android:name=".ui.news.activity.AboutActivity"/>
-
         <!-- 友盟统计 -->
         <meta-data
             android:name="UMENG_APPKEY"
