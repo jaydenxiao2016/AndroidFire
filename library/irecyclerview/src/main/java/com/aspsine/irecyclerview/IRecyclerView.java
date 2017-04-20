@@ -24,6 +24,7 @@ import com.jaydenxiao.common.commonutils.LogUtils;
 /**
  * Created by aspsine on 16/3/3.
  */
+
 public class IRecyclerView extends RecyclerView {
     private static final String TAG = IRecyclerView.class.getSimpleName();
 
