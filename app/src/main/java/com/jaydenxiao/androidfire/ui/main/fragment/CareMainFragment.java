@@ -7,7 +7,6 @@ import android.widget.LinearLayout;
 
 import com.jaydenxiao.androidfire.R;
 import com.jaydenxiao.androidfire.ui.news.activity.AboutActivity;
-import com.jaydenxiao.androidfire.ui.zone.DatasUtil;
 import com.jaydenxiao.androidfire.ui.zone.activity.CircleZoneActivity;
 import com.jaydenxiao.common.base.BaseFragment;
 import com.jaydenxiao.common.commonutils.ImageLoaderUtils;
@@ -43,7 +42,7 @@ public class CareMainFragment extends BaseFragment {
     @Override
     protected void initView() {
         //设置头像跟着波浪背景浮动
-        ImageLoaderUtils.displayRound(getContext(),imgLogo, DatasUtil.getRandomPhotoUrl());
+        ImageLoaderUtils.displayRound(getContext(),imgLogo,R.drawable.bgkobe);
         final FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(-2,-2);
         lp.gravity = Gravity.CENTER;
         waveView.setOnWaveAnimationListener(new WaveView.OnWaveAnimationListener() {

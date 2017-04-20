@@ -88,5 +88,14 @@ public class ImageLoaderUtils {
                 .error(R.drawable.toux2)
                 .centerCrop().transform(new GlideRoundTransformUtil(context)).into(imageView);
     }
+    public static void displayRound(Context context,ImageView imageView, int resId) {
+        if (imageView == null) {
+            throw new IllegalArgumentException("argument error");
+        }
+        Glide.with(context).load(resId)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .error(R.drawable.toux2)
+                .centerCrop().transform(new GlideRoundTransformUtil(context)).into(imageView);
+    }
 
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FA7C20</color>
-    <color name="colorPrimaryDark">#FA7C20</color>
-    <color name="colorAccent">#FA7C20</color>
+    <color name="colorPrimary">#FF000000</color>
+    <color name="colorPrimaryDark">#FF000000</color>
+    <color name="colorAccent">#FF000000</color>
     <!--白天主题-->
     <color name="day_backgroup_color">#FFFFFFFF</color>
     <color name="day_one_text_color">#FF000000</color>
