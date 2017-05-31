@@ -17,7 +17,12 @@ android {
     buildTypes {
         release {
             buildConfigField "boolean", "LOG_DEBUG", "false"
-            minifyEnabled false
+            //混淆
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             //apk命名
             android.applicationVariants.all { variant ->
@@ -33,6 +38,9 @@ android {
         }
         debug{
             buildConfigField "boolean", "LOG_DEBUG", "true"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
         }
     }
     //设置虚拟机堆内存空间大小，避免在编译期间OOM
