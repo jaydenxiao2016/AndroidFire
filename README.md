@@ -1,20 +1,20 @@
 AndroidFire，一款新闻阅读 App框架，基于 Material Design + MVP + RxJava + Retrofit + Glide，基本涵盖了当前 Android 端开发最常用的主流框架，基于此框架可以快速开发一个app。
 
 [安装地址](http://fir.im/androidFire)
-####国际案例，有图有真相：
+#### 国际案例，有图有真相：
 
 ![首页效果图](https://mmbiz.qlogo.cn/mmbiz_jpg/2EhjCcceOmiacVsI4wE6cDpOYHc0grkibzibpoxAG8EwBLVn4dHib3D0Wwrez4WeNmFkib19vKibYnMu9nQucqP5gvvw/0?wx_fmt=jpeg)
 ![美女和视频效果图](https://mmbiz.qlogo.cn/mmbiz_jpg/2EhjCcceOmiacVsI4wE6cDpOYHc0grkibzqao1ia26RiaZkP91tKePGT4OkuWU87wtYdmxpTauialIhhkVNic5DTUbiag/0?wx_fmt=jpeg)
 ![关注和朋友圈效果图](https://mmbiz.qlogo.cn/mmbiz_jpg/2EhjCcceOmiacVsI4wE6cDpOYHc0grkibzxbZBpcwzfT4icn613ltpvcpVQ1um2RrdOKOzA2XO8ETTE5DKTntKSBQ/0?wx_fmt=jpeg)
 ![朋友圈选择图片发布](https://mmbiz.qlogo.cn/mmbiz_jpg/2EhjCcceOmiacVsI4wE6cDpOYHc0grkibzAILAo5nkQhnsHkL3GyjbgEib8CFykAjXKn9SKwsD7PSzfQDBhOIsVFA/0?wx_fmt=jpeg)
 
-####目前模块包括：
+#### 目前模块包括：
 - 新闻：头条、科技、财经、NBA等类型，可自主选择订阅
 - 美图：美图壁纸
 - 视频：包括热点、搞笑、娱乐、精品视频
 - 关注：包括朋友圈、日夜模式切换(无需重启界面)功能
 
-####项目亮点：
+#### 项目亮点：
 - mvp模式：解耦model和view层，契约类管理mvp，一目了然，实现纵向解耦，基类完美封装，避免频繁new对象
 -  RxJava:包括Rx处理服务器请求、缓存、线程调度的完美封装
 - 复杂列表处理，充分解决滑动卡顿问题，具体方法看关注模块里面的“朋友圈”例子
@@ -23,7 +23,7 @@ AndroidFire，一款新闻阅读 App框架，基于 Material Design + MVP + RxJa
 - 各种封装好的依赖库，比如Irecyclerview：包含万能适配器、recyclerview的下拉刷新上拉加载更多、自定义刷新头和加载更多头；selectordialog：经常使用到的几种Dialog；oneKeyShareSDK：社交分享；微信和支付宝封装等等
 - 无关业务内容封装成model，基于此框架可以快速开发一个app
 
-####用到的开源库有：
+#### 用到的开源库有：
 - om.flyco.tablayout:FlycoTabLayout_Lib:2.0.8@aar 
 - com.github.clans:fab:1.6.4
 - com.squareup.retrofit2:retrofit:2.0.0-beta3
